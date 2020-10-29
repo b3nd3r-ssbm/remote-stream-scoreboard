@@ -50,7 +50,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/b3nd3r-ssbm/Remote-Scoreboard-Host.git"
+    "url": "https://github.com/b3nd3r-ssbm/Remote-Stream-Scoreboard.git"
   },
   "dependencies": {
     "ejs": "^3.1.3"
