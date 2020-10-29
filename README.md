@@ -1,4 +1,4 @@
-# stream-scoreboard-host
+# remote-scoreboard
  The program necessary to utilize the online scoreboard at https://ult.b3nd3rssbm.repl.co or https://melee.b3nd3rssbm.repl.co/
 # Video Tutorials
  <a href="https://youtu.be/jSCSJ2cGvhc">How to use the scoreboard with OBS</a><br>
