@@ -1,6 +1,5 @@
 const {app, BrowserWindow, remote} = require('electron');
 const {newSession,update,closeSession} = require('./server.js');
-const path = require('path');
 
 let code;
 let time = 0;

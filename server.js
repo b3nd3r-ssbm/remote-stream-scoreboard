@@ -56,8 +56,8 @@ function checkFunc(jsonData) {
 function updateFiles(data) {
   fs.writeFileSync('./ScoreFiles/p1.txt',data.p1.tag,'utf8');
   fs.writeFileSync('./ScoreFiles/p2.txt',data.p2.tag,'utf8');
-  fs.copyFileSync('./Icons/'+data["p1"].character+'/'+data['p1'].costume+'.png','./ScoreFiles/p1Char.png');
-  fs.copyFileSync('./Icons/'+data["p2"].character+'/'+data['p2'].costume+'.png','./ScoreFiles/p2Char.png');
+  fs.copyFileSync('./char-icons/'+data["p1"].character+'/'+data['p1'].costume+'.png','./ScoreFiles/p1Char.png');
+  fs.copyFileSync('./char-icons/'+data["p2"].character+'/'+data['p2'].costume+'.png','./ScoreFiles/p2Char.png');
   fs.writeFileSync('./ScoreFiles/p1score.txt',data.p1.score,'utf8');
   fs.writeFileSync('./ScoreFiles/p2score.txt',data.p2.score,'utf8');
 }
