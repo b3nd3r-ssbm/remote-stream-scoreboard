@@ -11,8 +11,8 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
-    "productName": "Stream Scoreboard Host",
-    "appId": "com.b3nd3rssbm.StreamScoreboardHost",
+    "productName": "Remote Scoreboard Host",
+    "appId": "com.b3nd3rssbm.RemoteScoreboardHost",
     "files": [
       "index.html",
       "index.js",
@@ -23,7 +23,7 @@
 	  "./win-icons",
 	  "style.css"
     ],
-    "artifactName": "Stream-Scoreboard-Host$-{version}-${os}.${ext}",
+    "artifactName": "Remote-Scoreboard-Host$-{version}-${os}.${ext}",
     "mac": {
       "category": "your.app.category.type",
       "target": [
@@ -50,7 +50,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/b3nd3r-ssbm/Stream-Scoreboard-Host.git"
+    "url": "https://github.com/b3nd3r-ssbm/Remote-Scoreboard-Host.git"
   },
   "dependencies": {
     "ejs": "^3.1.3"
