@@ -29,8 +29,10 @@ function setup() {
 }
 
 function draw() {
-  if(millis()-time >= 30000 && start == true){
-    update(code);
+  if(millis()-time >= 30000 && start){
+    update(code).then((data) => {
+      document.getElementById("jsonHere").innerHTML=JSON.stringify(data);
+	});
 	time=millis();
   }
 }

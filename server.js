@@ -14,6 +14,7 @@ function update(code) {
   checkFunc(data).then((data) => {
     updateFiles(JSON.parse(data));
   });
+  return checkFunc(data);
 }
 
 function closeSession(code) {
@@ -54,12 +55,16 @@ function checkFunc(jsonData) {
 }
 
 function updateFiles(data) {
-  fs.writeFileSync('./ScoreFiles/p1.txt',data.p1.tag,'utf8');
-  fs.writeFileSync('./ScoreFiles/p2.txt',data.p2.tag,'utf8');
-  fs.copyFileSync('./char-icons/'+data["p1"].character+'/'+data['p1'].costume+'.png','./ScoreFiles/p1Char.png');
-  fs.copyFileSync('./char-icons/'+data["p2"].character+'/'+data['p2'].costume+'.png','./ScoreFiles/p2Char.png');
-  fs.writeFileSync('./ScoreFiles/p1score.txt',data.p1.score,'utf8');
-  fs.writeFileSync('./ScoreFiles/p2score.txt',data.p2.score,'utf8');
+  let exePath = '.';
+  if(process.platform=="win32"){
+    exePath=process.env.PORTABLE_EXECUTABLE_DIR;
+  }
+  fs.writeFileSync(exePath+'/ScoreFiles/p1.txt',data.p1.tag,'utf8');
+  fs.writeFileSync(exePath+'/ScoreFiles/p2.txt',data.p2.tag,'utf8');
+  fs.copyFileSync(exePath+'/char-icons/'+data["p1"].character+'/'+data['p1'].costume+'.png',exePath+'/ScoreFiles/p1Char.png');
+  fs.copyFileSync(exePath+'/char-icons/'+data["p2"].character+'/'+data['p2'].costume+'.png',exePath+'/ScoreFiles/p2Char.png');
+  fs.writeFileSync(exePath+'/ScoreFiles/p1score.txt',data.p1.score,'utf8');
+  fs.writeFileSync(exePath+'/ScoreFiles/p2score.txt',data.p2.score,'utf8');
 }
 
 module.exports = { newSession, update, closeSession }
