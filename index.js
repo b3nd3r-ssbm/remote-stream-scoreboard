@@ -1,6 +1,5 @@
-const {app, BrowserWindow, remote, shell} = require('electron');
+const {app, BrowserWindow, remote} = require('electron');
 const {newSession,update,closeSession} = require('./server.js');
-const {check} = require('check-for-updates');
 
 let code;
 let time = 0;
@@ -22,12 +21,6 @@ function init() {
   newSession().then((data) => {
     setCode(JSON.parse(data).code);
 	setStart();
-  });
-  check().then((data) => {
-    if(data.isNew){
-      document.getElementById("updater").hidden = false;
-	  document.getElementById("updater").setAttribute("onclick","shell.openExternal('"+data.url+"')");
-    }		
   });
 }
 
