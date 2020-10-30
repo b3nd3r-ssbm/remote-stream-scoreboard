@@ -56,7 +56,7 @@ function checkFunc(jsonData) {
 
 function updateFiles(data) {
   let exePath = '.';
-  if(process.platform=="win32"){
+  if(process.platform=="win32"&&process.env.PORTABLE_EXECUTABLE_DIR!=undefined){
     exePath=process.env.PORTABLE_EXECUTABLE_DIR;
   }
   fs.writeFileSync(exePath+'/ScoreFiles/p1.txt',data.p1.tag,'utf8');
