@@ -1,6 +1,6 @@
 {
-  "name": "Remote-Scoreboard-Host",
-  "version": "0.1.5",
+  "name": "Remote-Stream-Scoreboard",
+  "version": "0.2.0",
   "main": "index.js",
   "author": "b3nd3r_ssbm",
   "description": "GPL-3.0-or-later",
@@ -17,11 +17,12 @@
       "index.html",
       "index.js",
       "package.json",
-	  "server.js",
-	  "p5.min.js",
-	  "renderer.js",
-	  "./win-icons",
-	  "style.css"
+      "server.js",
+      "p5.min.js",
+      "renderer.js",
+      "./win-icons",
+      "style.css",
+	  "check-for-updates.js"
     ],
     "artifactName": "Remote-Scoreboard-Host$-{version}-${os}.${ext}",
     "mac": {
