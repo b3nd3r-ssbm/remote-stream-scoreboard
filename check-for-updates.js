@@ -3,7 +3,7 @@ const fs = require('fs');
 
 let name="Remote-Stream-Scoreboard";
 let author="b3nd3r-ssbm";
-let version="0.1.5";
+let version="0.2.0";
 
 const options={
   headers: {
